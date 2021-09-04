@@ -1,4 +1,4 @@
-name: "Tests - Current"
+name: "Tests"
 
 on:
   push:
@@ -35,9 +35,8 @@ jobs:
           echo "::add-matcher::${{ runner.tool_cache }}/php.json"
           echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
-
-    - name: Execute tests
-      env:
-        DB_CONNECTION: sqlite
-        DB_DATABASE: ":memory:"
-      run: vendor/bin/phpunit
+      - name: Execute tests
+        env:
+          DB_CONNECTION: sqlite
+          DB_DATABASE: ":memory:"
+        run: vendor/bin/phpunit
