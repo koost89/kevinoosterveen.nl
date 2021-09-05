@@ -16,8 +16,9 @@ jobs:
 
       - name: Cache Node dependencies
         uses: actions/cache@v2
-        path: ~/.npm
-        key: dependencies-node-${{ hashFiles('package-lock.json') }}
+        with:
+          path: ~/.npm
+          key: dependencies-node-${{ hashFiles('package-lock.json') }}
 
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
