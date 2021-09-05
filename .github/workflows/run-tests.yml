@@ -48,6 +48,9 @@ jobs:
           echo "::add-matcher::${{ runner.tool_cache }}/phpunit.json"
 
       - name: Execute tests
+        env:
+          DB_CONNECTION=sqlite
+          DB_DATABASE=":memory"  
         run: php artisan test
 
       - name: Deploy
