@@ -1,5 +1,5 @@
-<x-app-layout>
+<x-guest-layout>
     <x-slot name="title">{{  __("Hi there!") }}</x-slot>
     Hi there
-</x-app-layout>
+</x-guest-layout>
 
