@@ -28,4 +28,13 @@ class PostFactory extends Factory
             'text' => $this->faker->text(4000),
         ];
     }
+
+    public function published(): Factory
+    {
+        return $this->state(function (array $attributes) {
+            return [
+                'published' => true,
+            ];
+        });
+    }
 }

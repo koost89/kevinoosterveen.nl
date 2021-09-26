@@ -78,7 +78,7 @@ class Post extends Resource
     public function actions(Request $request): array
     {
         return [
-            new TogglePostPublication,
+            new TogglePostPublication(),
         ];
     }
 }

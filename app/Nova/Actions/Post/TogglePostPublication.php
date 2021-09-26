@@ -11,7 +11,8 @@ use Laravel\Nova\Fields\ActionFields;
 
 class TogglePostPublication extends Action
 {
-    use InteractsWithQueue, Queueable;
+    use InteractsWithQueue;
+    use Queueable;
 
     public function handle(ActionFields $fields, Collection $models)
     {
