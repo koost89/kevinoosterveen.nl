@@ -17,8 +17,15 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body>
-        <div class="font-sans text-gray-900 antialiased">
-            {{ $slot }}
+        <div class="font-sans min-h-screen bg-black text-white antialiased">
+            <div class="flex max-w-[100rem] mx-auto h-16 mb-10 pt-10">
+                <h1 class="p-4 text-4xl font-extrabold text-white self-center">
+                    <a href="/">{{ __("Laravel Bits") }}</a>
+                </h1>
+            </div>
+            <div class="container mx-auto">
+                {{ $slot }}
+            </div>
         </div>
     </body>
 </html>

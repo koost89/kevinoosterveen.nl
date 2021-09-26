@@ -12,11 +12,16 @@ class PostController extends Controller
     {
         return view('posts.index', [
             'posts' => Post::with('tags')
-                ->search(collect($request->only(['tag', 'q'])))
+                ->filter(collect($request->only(['tag', 'q'])))
                 ->published()
                 ->orderBy('created_at')
-                ->simplePaginate(10)
+                ->simplePaginate(9)
                 ->withQueryString(),
         ]);
+    }
+
+    public function show(Post $post)
+    {
+        dd($post);
     }
 }

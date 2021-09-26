@@ -3,7 +3,6 @@
 namespace App\Nova;
 
 use App\Nova\Actions\Post\TogglePostPublication;
-use App\Nova\Actions\Post\UnPublishPost;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
@@ -57,6 +56,10 @@ class Post extends Resource
 
                 Markdown::make('Text')
                     ->rules(['required', 'string'])
+                    ->withMeta(['extraAttributes' => [
+                        'placeholder' => 'Make it less than 50 characters']
+                    ])
+                    ->stacked()
                     ->alwaysShow(),
 
             ]),

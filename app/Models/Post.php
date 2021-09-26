@@ -21,7 +21,7 @@ class Post extends Model
         return $query->where('published', true);
     }
 
-    public function scopeSearch(Builder $query, Collection $searchFields)
+    public function scopeFilter(Builder $query, Collection $searchFields)
     {
         return $query
             ->when($searchFields->has('tag'), fn (Builder $q) => $q->whereRelation('tags', 'name', $searchFields->get('tag')))

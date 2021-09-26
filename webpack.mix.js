@@ -11,6 +11,13 @@ const tailwindcss = require('tailwindcss'); /* Add this line at the top */
  |
  */
 
+mix.webpackConfig({
+    devServer: {
+        host: '0.0.0.0',
+        port: 8080
+    }
+})
+
 mix.js('resources/js/app.js', 'public/js')
     .sass('resources/scss/app.scss', 'public/css')
     .options({
