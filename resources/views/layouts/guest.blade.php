@@ -12,9 +12,11 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <livewire:styles/>
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
+
     </head>
     <body>
         <div class="font-sans min-h-screen bg-black text-white antialiased">
@@ -24,8 +26,11 @@
                 </h1>
             </div>
             <div class="container mx-auto">
+                <livewire:search/>
+
                 {{ $slot }}
             </div>
         </div>
+        <livewire:scripts/>
     </body>
 </html>

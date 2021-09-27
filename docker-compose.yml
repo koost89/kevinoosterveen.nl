@@ -23,6 +23,7 @@ services:
         depends_on:
             - mysql
             - redis
+            - meilisearch
 
     mysql:
         image: 'mysql:8.0'
@@ -64,6 +65,15 @@ services:
         networks:
             - sail
 
+    meilisearch:
+        image: 'getmeili/meilisearch'
+        ports:
+            - "7700:7700"
+        volumes:
+            - 'sailmeilisearch:/data.ms'
+        networks:
+            - sail
+
 networks:
     sail:
         driver: bridge
@@ -72,4 +82,6 @@ volumes:
     sailmysql:
         driver: local
     sailredis:
+        driver: local
+    sailmeilisearch:
         driver: local

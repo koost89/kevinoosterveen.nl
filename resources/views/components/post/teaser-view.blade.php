@@ -1,8 +1,8 @@
-<div class="flex flex-col border-b-2 p-4 border-gray-800 border-opacity-30">
+<div class="flex flex-col p-4">
     <a href="{{ route('posts.show', $post->id) }}" class="bg-transition-underline">
         <img class="w-full h-36 p-2 bg-gray-200 rounded-md" src="{{ asset('storage/uploads/laravel.svg') }}" alt="logo">
         <div class="mt-4">
-            <span class="font-bold text-2xl bg-growing-underline">{{ $post->title }}</span>
+            <span class="font-bold text-2xl">{{ $post->title }}</span>
         </div>
     </a>
     <div class="flex flex-1 mt-4">

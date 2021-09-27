@@ -8,7 +8,8 @@
             </div>
         @endforelse
     </div>
-
-    {{ $posts->links() }}
+    <div class="mt-6">
+        {{ $posts->links() }}
+    </div>
 </x-guest-layout>
 
