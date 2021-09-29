@@ -20,14 +20,19 @@
     </head>
     <body>
         <div class="font-sans min-h-screen bg-black text-white antialiased">
-            <div class="flex max-w-[100rem] mx-auto h-16 mb-10 pt-10">
-                <h1 class="p-4 text-4xl font-extrabold text-white self-center">
-                    <a href="/">{{ __("Laravel Bits") }}</a>
-                </h1>
+            <div class="max-w-screen-2xl mx-auto mb-10 pt-10 space-x-2">
+                <div class="flex">
+                    <h1 class="text-4xl font-extrabold text-white self-center">
+                        <a href="/">{{ __("Laravel Bits") }}</a>
+                    </h1>
+                    <div class="flex flex-1 max-w-2xl ml-auto">
+                        <livewire:search/>
+                    </div>
+                </div>
             </div>
             <div class="container mx-auto">
-                <livewire:search/>
-
+{{--                <div class="mb-4">--}}
+{{--                </div>--}}
                 {{ $slot }}
             </div>
         </div>

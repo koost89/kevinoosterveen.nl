@@ -17,6 +17,7 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('slug');
+            $table->string('excerpt')->nullable();
             $table->longText('text');
             $table->string('external_url')->nullable();
             $table->boolean('published')->default(false);

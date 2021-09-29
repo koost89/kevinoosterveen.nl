@@ -1,4 +1,4 @@
-<div class="flex flex-col p-4">
+<div class="flex flex-col">
     <a href="{{ route('posts.show', $post->id) }}" class="bg-transition-underline">
         <img class="w-full h-36 p-2 bg-gray-200 rounded-md" src="{{ asset('storage/uploads/laravel.svg') }}" alt="logo">
         <div class="mt-4">

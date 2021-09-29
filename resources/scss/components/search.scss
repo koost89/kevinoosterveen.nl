@@ -1,0 +1,16 @@
+.search-result {
+   &.post {
+       @apply space-y-2;
+
+       .post-result-item {
+           em {
+               @apply bg-yellow-400 text-yellow-900;
+           }
+
+           &.title {
+               @apply font-bold;
+           }
+       }
+
+   }
+}

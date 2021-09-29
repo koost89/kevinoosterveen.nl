@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphToMany;
 use Illuminate\Support\Collection;
+use JetBrains\PhpStorm\ArrayShape;
 use Laravel\Scout\Searchable;
 
 class Post extends Model
@@ -44,7 +45,9 @@ class Post extends Model
         return [
             'id' => $this->id,
             'title' => $this->title,
+            'excerpt' => $this->excerpt,
             'text' => $this->text,
+            'tags' => $this->tags->pluck('name'),
             'external_url' => $this->external_url
         ];
     }
