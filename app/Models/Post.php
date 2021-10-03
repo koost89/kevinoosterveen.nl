@@ -47,6 +47,7 @@ class Post extends Model
             'title' => $this->title,
             'excerpt' => $this->excerpt,
             'text' => $this->text,
+            'slug' => $this->slug,
             'tags' => $this->tags->pluck('name'),
             'external_url' => $this->external_url
         ];

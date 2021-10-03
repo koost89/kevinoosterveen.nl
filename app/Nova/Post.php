@@ -54,6 +54,8 @@ class Post extends Resource
                 Slug::make('Slug')
                     ->from('Title'),
 
+                Text::make('Excerpt'),
+
                 Markdown::make('Text')
                     ->rules(['required', 'string'])
                     ->withMeta(['extraAttributes' => [

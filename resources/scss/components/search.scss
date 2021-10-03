@@ -1,16 +1,24 @@
-.search-result {
-   &.post {
-       @apply space-y-2;
+.search-wrapper {
+    @apply relative flex flex-wrap w-full;
 
-       .post-result-item {
-           em {
-               @apply bg-yellow-400 text-yellow-900;
-           }
+    .search-results {
+        @apply absolute top-10 flex flex-col rounded-md  space-y-4 bg-gray-800 p-2;
+    }
 
-           &.title {
-               @apply font-bold;
-           }
-       }
+    .search-result {
+        &.post {
+            @apply p-3 space-y-2 hover:bg-gray-700 hover:shadow-md rounded-md;
 
-   }
+            .post-result-item {
+                em {
+                    @apply bg-yellow-600 bg-opacity-60 text-white not-italic;
+                }
+
+                &.title {
+                    @apply font-bold;
+                }
+            }
+
+        }
+    }
 }

@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Post;
+use App\Models\Tag;
 use Illuminate\Database\Eloquent\Factories\Relationship;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\Relation;
@@ -28,8 +29,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Model::unguard();
-        Relation::enforceMorphMap([
+        Relation::morphMap([
             'post' => Post::class,
+            'tag' => Tag::class,
+
         ]);
     }
 }
